@@ -216,7 +216,7 @@ int delete(FILE *db_file, char *name) {
   return deleted;
 }
 
-int search (File *db_file, char *name) {
+int search (FILE *db_file, char *name) {
   entry *p = load_entries(db_file);
   entry *base = p;
   int search = 0;
