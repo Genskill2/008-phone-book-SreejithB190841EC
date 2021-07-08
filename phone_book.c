@@ -72,7 +72,6 @@ int main(int argc, char *argv[]) {
       printf("no match\n");
       exit(1);
   }
-    fclose(fp);
     exit(0);
   }else if (strcmp(argv[1], "delete") == 0) {  /* Handle delete */
     if (argc != 3) {
