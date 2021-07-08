@@ -203,16 +203,19 @@ int delete(FILE *db_file, char *name) {
   entry *p = load_entries(db_file);
   entry *base = p;
   entry *prev = base;
+  entry* del=NULL;
   int deleted = 0;
   while (p!=NULL) {
     if(strcmp(base->name,name)==0){
+       del=base;
        base=base->next;
-       p=NULL;
+       free(del);
        deleted++;
     }
     else if (strcmp(p->name, name) == 0) {
+       del=base;
        prev->next=p->next;
-       p=NULL;
+       free(del);
        deleted++;
     }
     else {
