@@ -193,7 +193,7 @@ void list(FILE *db_file) {
     printf("%-20s : %10s\n", p->name, p->phone);
     p=p->next;i++;
   }
-  printf("Total entries: %i\n",i);
+  printf("Total entries :  %i\n",i);
   free_entries(base);
 }
 
