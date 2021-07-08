@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
       printf("no match\n");
       fclose(fp);
       exit(1);
-  } else if (strcmp(argv[1], "delete") == 0) {  /* Handle delete */
+  } }else if (strcmp(argv[1], "delete") == 0) {  /* Handle delete */
     if (argc != 3) {
       print_usage("Improper arguments for delete", argv[0]);
       exit(1);
